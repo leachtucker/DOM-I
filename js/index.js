@@ -59,13 +59,27 @@ ctaSection.querySelector('#cta-img').src = siteContent["cta"]["img-src"];
 
 // Finding main content section
 let mainContent = document.querySelector('.main-content');
-let features = mainContent.querySelector('.top-content :nth-child(1)');
-let about = mainContent.querySelector('.top-content :nth-child(2) div.text-content');
-
-console.log(about)
+let features = mainContent.querySelector('.top-content').querySelector('div.text-content:nth-child(1)');
+let about = mainContent.querySelector('.top-content').querySelector('div.text-content:nth-child(2)');
 
 features.querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
 features.querySelector('p').textContent = siteContent["main-content"]["features-content"];
 
-// about.querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
-// about.querySelector('p').textContent = siteContent["main-content"]["about-content"];
+about.querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+about.querySelector('p').textContent = siteContent["main-content"]["about-content"];
+
+mainContent.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+let bottomContent = mainContent.querySelector('.bottom-content');
+
+// Services
+bottomContent.querySelector('div.text-content:nth-child(1)').querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+bottomContent.querySelector('div.text-content:nth-child(1)').querySelector('p').textContent = siteContent["main-content"]["services-content"];
+
+// Product
+bottomContent.querySelector('div.text-content:nth-child(2)').querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+bottomContent.querySelector('div.text-content:nth-child(2)').querySelector('p').textContent = siteContent["main-content"]["product-content"];
+
+// Vision
+bottomContent.querySelector('div.text-content:nth-child(3)').querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+bottomContent.querySelector('div.text-content:nth-child(3)').querySelector('p').textContent = siteContent["main-content"]["vision-content"];

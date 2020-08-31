@@ -9,7 +9,7 @@ const siteContent = {
         "img-src": "img/logo.png"
     },
     "cta": {
-        "h1": "DOM Is Awesome",
+        "h1": "DOM\nIs\nAwesome",
         "button": "Get Started",
         "img-src": "img/header-img.png"
     },
@@ -68,7 +68,7 @@ features.querySelector('p').textContent = siteContent["main-content"]["features-
 about.querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
 about.querySelector('p').textContent = siteContent["main-content"]["about-content"];
 
-mainContent.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"];
+mainContent.querySelector('#middle-img').src = siteContent["main-content"]["middle-img-src"];
 
 let bottomContent = mainContent.querySelector('.bottom-content');
 
@@ -94,3 +94,18 @@ contactContent.querySelector('p:nth-child(4)').textContent = siteContent["contac
 // Finding footer
 let footer = document.querySelector('footer');
 footer.querySelector('p').textContent = siteContent["footer"]["copyright"];
+
+// Change color of nav text
+let nav = header.querySelector('nav');
+// Even while in the CSS file, changing the color property of 'nav' does nothing, so I selected each individual anchor tag instead.
+nav.querySelectorAll('a').forEach(anchor => anchor.style.color = 'green');
+
+// Creating new links in the nav
+let newLink1 = document.createElement('a');
+newLink1.textContent = "Our Team";
+
+let newLink2 = document.createElement('a');
+newLink2.textContent = "Support";
+
+nav.appendChild(newLink1);
+nav.prepend(newLink2);

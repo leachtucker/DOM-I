@@ -56,3 +56,16 @@ let ctaSection = document.querySelector('.cta');
 ctaSection.querySelector('h1').textContent = siteContent["cta"]["h1"];
 ctaSection.querySelector('button').textContent = siteContent["cta"]["button"];
 ctaSection.querySelector('#cta-img').src = siteContent["cta"]["img-src"];
+
+// Finding main content section
+let mainContent = document.querySelector('.main-content');
+let features = mainContent.querySelector('.top-content :nth-child(1)');
+let about = mainContent.querySelector('.top-content :nth-child(2) div.text-content');
+
+console.log(about)
+
+features.querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+features.querySelector('p').textContent = siteContent["main-content"]["features-content"];
+
+// about.querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+// about.querySelector('p').textContent = siteContent["main-content"]["about-content"];

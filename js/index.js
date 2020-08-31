@@ -49,3 +49,10 @@ let links = header.querySelectorAll('a');
 for (let i = 0; i < links.length; i++) {
     links[i].textContent = siteContent["nav"]["nav-item-" + i];
 }
+
+
+// Finding CTA section
+let ctaSection = document.querySelector('.cta');
+ctaSection.querySelector('h1').textContent = siteContent["cta"]["h1"];
+ctaSection.querySelector('button').textContent = siteContent["cta"]["button"];
+ctaSection.querySelector('#cta-img').src = siteContent["cta"]["img-src"];

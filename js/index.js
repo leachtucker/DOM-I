@@ -58,7 +58,7 @@ ctaSection.querySelector('button').textContent = siteContent["cta"]["button"];
 ctaSection.querySelector('#cta-img').src = siteContent["cta"]["img-src"];
 
 // Finding main content section
-let mainContent = document.querySelector('.main-content');
+let mainContent = document.querySelector('section.main-content');
 let features = mainContent.querySelector('.top-content').querySelector('div.text-content:nth-child(1)');
 let about = mainContent.querySelector('.top-content').querySelector('div.text-content:nth-child(2)');
 
@@ -83,3 +83,14 @@ bottomContent.querySelector('div.text-content:nth-child(2)').querySelector('p').
 // Vision
 bottomContent.querySelector('div.text-content:nth-child(3)').querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
 bottomContent.querySelector('div.text-content:nth-child(3)').querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+
+// Finding contact section
+let contactContent = document.querySelector('section.contact');
+contactContent.querySelector('h4').textContent = siteContent["contact"]["contact-h4"];
+contactContent.querySelector('p:nth-child(2)').textContent = siteContent["contact"]["address"];
+contactContent.querySelector('p:nth-child(3)').textContent = siteContent["contact"]["phone"];
+contactContent.querySelector('p:nth-child(4)').textContent = siteContent["contact"]["email"];
+
+// Finding footer
+let footer = document.querySelector('footer');
+footer.querySelector('p').textContent = siteContent["footer"]["copyright"];

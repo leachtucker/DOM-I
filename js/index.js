@@ -109,3 +109,16 @@ newLink2.textContent = "Support";
 
 nav.appendChild(newLink1);
 nav.prepend(newLink2);
+
+// Stretch
+nav.querySelectorAll('a').forEach(anchor => anchor.style.color = 'grey');
+
+document.querySelectorAll('h4').forEach(h4 => {
+    h4.style.fontSize = "1.5rem";
+    h4.style.letterSpacing = "4px";
+});
+
+document.querySelectorAll('p').forEach(p => {
+    p.style.fontSize = "1rem";
+    p.style.color = "grey";
+});
